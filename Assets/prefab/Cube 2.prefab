@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1956025420663413320}
   - component: {fileID: 559177426069783807}
   - component: {fileID: 3841304319557047702}
-  - component: {fileID: 6122722292712410643}
   - component: {fileID: 7827489475964953129}
+  - component: {fileID: 7471418478300522215}
+  - component: {fileID: 400659766015926594}
   m_Layer: 0
   m_Name: Cube 2
   m_TagString: Untagged
@@ -110,19 +111,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6122722292712410643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6724929397603717468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb4bf9eac8bdec47a5c6d65f04e2dd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
 --- !u!114 &7827489475964953129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +153,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7471418478300522215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724929397603717468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c39f3222369744d8316e1dbbb4928f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionWithObjectUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &400659766015926594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724929397603717468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c2e296b7a2f83479336d771b4f23dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabType: 1
