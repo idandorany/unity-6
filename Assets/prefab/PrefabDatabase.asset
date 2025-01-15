@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 652930624612763054, guid: a2604d7a77dab264192a81d92766222c, type: 3}
-  - {fileID: 6724929397603717468, guid: 930d542eb79201242a2870076a53696b, type: 3}
+  - {fileID: 5852040699260097404, guid: 96d1564397ae4584080287c9312dbc85, type: 3}
+  - {fileID: 754402529154408229, guid: 54d85bf6370bdf4469d821cb88d1dd76, type: 3}
   linkedPrefabData:
     description: 
     spawnChance: 0
