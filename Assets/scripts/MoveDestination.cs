@@ -7,7 +7,7 @@ public class MoveDestination : MonoBehaviour
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private string _areaName = "Mud"; // Name of the area to avoid
     [SerializeField] private float _areaCost = 50.0f; // High cost to make the area undesirable
-
+    [SerializeField] private Animator _animator;
     void Start()
     {
         if (_agent == null)
@@ -32,6 +32,7 @@ public class MoveDestination : MonoBehaviour
         if (Goal != null)
         {
             _agent.SetDestination(Goal.position);
+            _animator.SetFloat("Speed", _agent.speed);
         }
         else
         {
