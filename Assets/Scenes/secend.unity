@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381360072}
   - component: {fileID: 381360071}
+  - component: {fileID: 381360073}
   m_Layer: 0
   m_Name: manger
   m_TagString: Untagged
@@ -163,6 +164,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &381360073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381360070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a18719204f452140bf56af2f2eeed62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabDatabase: {fileID: 11400000, guid: 53a4f0080879fba45bfe7ce077200d8b, type: 2}
+  spownLocation: {fileID: 1235955643}
+  typeToSpown: 0
 --- !u!1 &550557060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5852040699260097404, guid: 96d1564397ae4584080287c9312dbc85, type: 3}
@@ -183,9 +199,9 @@ MonoBehaviour:
   OnNoParamCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1887000164}
-        m_TargetAssemblyTypeName: ObjectB, Assembly-CSharp
-        m_MethodName: ChangeColor
+      - m_Target: {fileID: 550557061}
+        m_TargetAssemblyTypeName: ObjectA, Assembly-CSharp
+        m_MethodName: Test
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -198,13 +214,13 @@ MonoBehaviour:
   OnTransformCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1887000164}
-        m_TargetAssemblyTypeName: ObjectB, Assembly-CSharp
-        m_MethodName: SetPosition
-        m_Mode: 2
+      - m_Target: {fileID: 550557061}
+        m_TargetAssemblyTypeName: ObjectA, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1887000168}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -439,6 +455,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &1235955642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235955643}
+  m_Layer: 0
+  m_Name: spownLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235955643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235955642}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.86, y: 1.65, z: -11.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341690223
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,11 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe127add55d78e24e89d95099e75fce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1887000168 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5051856922829815284, guid: 54d85bf6370bdf4469d821cb88d1dd76, type: 3}
-  m_PrefabInstance: {fileID: 3693869552359771899}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1887000169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,3 +907,4 @@ SceneRoots:
   - {fileID: 2033146344}
   - {fileID: 325098719804784841}
   - {fileID: 3693869552359771899}
+  - {fileID: 1235955643}

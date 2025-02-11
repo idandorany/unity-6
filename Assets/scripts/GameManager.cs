@@ -1,18 +1,29 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public PrefabDatabase prefabDatabase;
-
+    [SerializeField] private Transform spownLocation;
+    [SerializeField] private PrefabType typeToSpown;
     void Start()
     {
-        var randomPrefab = prefabDatabase.GetRandomPrefab();
-        Instantiate(randomPrefab, Vector3.zero, Quaternion.identity);
+        GameObject randomPrefab = prefabDatabase.GetRandomPrefab();
+        GameObject rp = Instantiate(randomPrefab, spownLocation.position, Quaternion.identity);
+        ChangeColor(rp);
 
-        var specificPrefab = prefabDatabase.GetPrefabByType(PrefabType.TypeA);
-        if (specificPrefab != null)
+        for (int i = 0; i < prefabDatabase.prefabs.Length; i++)
         {
-            Instantiate(specificPrefab, Vector3.right * 2, Quaternion.identity);
+            if (prefabDatabase.prefabs[i].GetComponent<PrefabInfo>().prefabType == typeToSpown)
+            {
+                GameObject rpType = Instantiate(randomPrefab, spownLocation.position + Vector3.right * 2, Quaternion.identity);
+                ChangeColor(rpType);
+            }
         }
+    }
+    public void ChangeColor(GameObject GO)
+    {
+
+         GO.GetComponent<Renderer>().material.color = Random.ColorHSV();
     }
 }

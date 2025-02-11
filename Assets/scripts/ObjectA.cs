@@ -18,10 +18,18 @@ public class ObjectA : MonoBehaviour
         OnVectorCollision?.Invoke(transform.position);
         OnCustomCollision?.Invoke(new CustomData { Position = transform.position, Name = name });
     }
-
+    public void Test()
+    {
+        Debug.Log("testactive");
+    }
     public class CustomData
     {
         public Vector3 Position;
         public string Name;
+    }
+    public void ChangeColor()
+    {
+
+        GetComponent<Renderer>().material.color = Random.ColorHSV();
     }
 }
